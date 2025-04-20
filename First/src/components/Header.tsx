@@ -1,6 +1,7 @@
 export const Header = () => {
     return(
-        <div className="border-amber-500 border-4 p-4 m-4">
+        <header>
+            <div className="border-amber-500 border-4 p-4 m-4">
             <h1>We are inside the Header</h1>
             <div>
                 <ul className="list-disc p-2">
@@ -15,5 +16,6 @@ export const Header = () => {
                 </ul>
             </div>
         </div>
+        </header>
     )
 }

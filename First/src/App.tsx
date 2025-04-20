@@ -1,12 +1,12 @@
 import { Header } from "./components/Header"
+import { Footer } from "./components/Footer"
 
 function App() {
 
   return (
     <div className="w-screen h-screen flex justify-start items-start flex-col">
-       <h1>Header Task</h1>
-       <h1>Header Task</h1>
        <Header />
+       <Footer/>
     </div>
   )
 }
