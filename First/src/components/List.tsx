@@ -3,9 +3,9 @@ export const List = () => {
     const numbers = [1,2,3,4,5];
     const fruits = ["apple", "banana", "cherry", "mango"];
     const users = [
-        { name: "Alice", age: 20 },
-        { name: "Bob", age: 25 },
-        { name: "Charlie", age: 30 }
+        { id: 1, name: "Alice", age: 20 },
+        { id: 2, name: "Bob", age: 25 },
+        { id: 3, name: "Charlie", age: 30 }
       ]
       
 
@@ -30,7 +30,7 @@ export const List = () => {
             <br />
             <ul>
                 {users.map((user) => (
-                    <li key={Math.random()}>
+                    <li key={user.id}>
                         {user.name} is {user.age} old
                     </li>
                 ))}
