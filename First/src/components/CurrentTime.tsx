@@ -10,7 +10,7 @@ setCurrentDate(new Date);
         }, 1000)
     }, [])
     return(
-        <div>
+        <div className="border-fuchsia-700 border-4 m-4">
             {currentDate.toString()}
         </div>
     )
