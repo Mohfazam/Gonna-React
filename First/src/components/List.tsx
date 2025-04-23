@@ -30,7 +30,7 @@ export const List = () => {
             <br />
             <ul>
                 {users.map((user) => (
-                    <li>
+                    <li key={Math.random()}>
                         {user.name} is {user.age} old
                     </li>
                 ))}
