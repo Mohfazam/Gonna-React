@@ -18,6 +18,6 @@ const InValidPassword = () => {
 
 export const Password = ({flag}:{flag: boolean}) => {
    
-        return flag ? <ValidPassword /> : <InValidPassword />
+        return flag ? <ValidPassword /> : <InValidPassword />;
     
 }
