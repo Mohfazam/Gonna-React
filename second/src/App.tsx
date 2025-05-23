@@ -27,12 +27,26 @@
 import { useState } from "react";
 import { Weather } from "./components/Weather";
 import { Profile } from "./components/Profile";
+import { Time } from "./components/Time";
 
 
 function App() {
 
   
   const [value, setValue] = useState(0);
+
+  function detectTime() {
+    const hour = new Date().getHours();
+    console.log(hour);
+    if(hour > 5 && hour < 12){
+      return "Morning"
+    } else if(hour >= 21 || hour <= 5){
+      return "Night"
+    } 
+    else{
+      return "Evening"
+    }
+  }
 
   return (
     <>
@@ -45,6 +59,11 @@ function App() {
      <div className="p-2 m-2 border-amber-950 border-4 w-fit ">
       
       <Profile isAdmin={false} LoggedIn={false} />
+     </div>
+
+     <div className="p-2 m-2 border-amber-950 border-4 w-fit ">
+      
+      <Time timing={detectTime()}></Time>
      </div>
     </>
   )
