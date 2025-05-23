@@ -30,13 +30,15 @@ import { Weather } from "./components/Weather";
 
 function App() {
 
-  const [flag, setFlag] = useState(true);
   
+  const [value, setValue] = useState(0);
 
   return (
     <>
      <div className="p-2 m-2 border-amber-950 border-4 w-fit ">
-      <Weather temprature={27} />
+      
+      <input type="text" onChange={(e) => setValue(Number(e.target.value))} placeholder="Enter the Temprature"/>
+      <Weather temprature={value} />
      </div>
     </>
   )
