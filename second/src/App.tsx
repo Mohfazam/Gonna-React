@@ -26,6 +26,7 @@
 
 import { useState } from "react";
 import { Weather } from "./components/Weather";
+import { Profile } from "./components/Profile";
 
 
 function App() {
@@ -39,6 +40,11 @@ function App() {
       
       <input type="text" onChange={(e) => setValue(Number(e.target.value))} placeholder="Enter the Temprature"/>
       <Weather temprature={value} />
+     </div>
+
+     <div className="p-2 m-2 border-amber-950 border-4 w-fit ">
+      
+      <Profile isAdmin={false} LoggedIn={false} />
      </div>
     </>
   )
