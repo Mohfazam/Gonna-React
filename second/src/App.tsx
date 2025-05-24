@@ -36,11 +36,11 @@ function App() {
   const [value, setValue] = useState(0);
 
   function detectTime() {
-    const hour = new Date().getHours();
+    const hour = new Date().getHours(); 
     console.log(hour);
     if(hour > 5 && hour < 12){
       return "Morning"
-    } else if(hour >= 21 || hour <= 5){
+    } else if(hour >= 21 || hour <= 5){ 
       return "Night"
     } 
     else{
