@@ -8,7 +8,17 @@ import './App.css'
 // }
 
 function App() {
-  const [tesk, setTask] = useState([{}])
+  const [inputValue, setinputValue] = useState("");
+  const [task, setTask] = useState([]);
+
+  const handleTask = () => {
+    const newTask = {
+      task: inputValue,
+      status: "due"
+    }
+
+    setTask()
+  };
 
   return (
     <>
@@ -18,11 +28,11 @@ function App() {
 
       <div>
         <strong>Task:</strong>
-        <input type="text" placeholder='Enter Task'/>
+        <input type="text" placeholder='Enter Task' onChange={(e) => setinputValue(e.target.value)}/>
       </div>
 
       <div>
-        
+        <button onClick={setTask(() => )}>Add task</button>
       </div>
     </>
   )
