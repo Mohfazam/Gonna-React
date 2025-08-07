@@ -1,11 +1,13 @@
 // import { useState } from "react";
 // import { Password } from "./components/Password";
 
+import { Products } from "./components/Products"
+
 
 // function App() {
 
 //   const [flag, setFlag] = useState(true);
-  
+
 
 //   return (
 //     <>
@@ -24,48 +26,83 @@
 
 
 
-import { useState } from "react";
-import { Weather } from "./components/Weather";
-import { Profile } from "./components/Profile";
-import { Time } from "./components/Time";
+// import { useState } from "react";
+// import { Weather } from "./components/Weather";
+// import { Profile } from "./components/Profile";
+// import { Time } from "./components/Time";
 
+
+// function App() {
+
+
+//   const [value, setValue] = useState(0);
+
+//   function detectTime() {
+//     const hour = new Date().getHours(); 
+//     console.log(hour);
+//     if(hour > 5 && hour < 12){
+//       return "Morning"
+//     } else if(hour >= 21 || hour <= 5){ 
+//       return "Night"
+//     } 
+//     else{
+//       return "Evening"
+//     }
+//   }
+
+//   return (
+//     <>
+//      <div className="p-2 m-2 border-amber-950 border-4 w-fit ">
+
+//       <input type="text" onChange={(e) => setValue(Number(e.target.value))} placeholder="Enter the Temprature"/>
+//       <Weather temprature={value} />
+//      </div>
+
+//      <div className="p-2 m-2 border-amber-950 border-4 w-fit ">
+
+//       <Profile isAdmin={false} LoggedIn={false} />
+//      </div>
+
+//      <div className="p-2 m-2 border-amber-950 border-4 w-fit ">
+
+//       <Time timing={detectTime()}></Time>
+//      </div>
+//     </>
+//   )
+// }
+
+interface ListType {
+  product: string;
+  price: number;
+  quantity: number;
+}
 
 function App() {
 
-  
-  const [value, setValue] = useState(0);
-
-  function detectTime() {
-    const hour = new Date().getHours(); 
-    console.log(hour);
-    if(hour > 5 && hour < 12){
-      return "Morning"
-    } else if(hour >= 21 || hour <= 5){ 
-      return "Night"
-    } 
-    else{
-      return "Evening"
+  const list: ListType[] = [
+    {
+      product: "Apple",
+      price: 20,
+      quantity: 80
+    },
+    {
+      product: "banana",
+      price: 10,
+      quantity: 30
+    },
+    {
+      product: "Grapes",
+      price: 30,
+      quantity: 90
     }
-  }
+
+  ]
+
 
   return (
-    <>
-     <div className="p-2 m-2 border-amber-950 border-4 w-fit ">
-      
-      <input type="text" onChange={(e) => setValue(Number(e.target.value))} placeholder="Enter the Temprature"/>
-      <Weather temprature={value} />
-     </div>
-
-     <div className="p-2 m-2 border-amber-950 border-4 w-fit ">
-      
-      <Profile isAdmin={false} LoggedIn={false} />
-     </div>
-
-     <div className="p-2 m-2 border-amber-950 border-4 w-fit ">
-      
-      <Time timing={detectTime()}></Time>
-     </div>
-    </>
+    <div>
+      <Products list={list} />
+    </div>
   )
 }
 
