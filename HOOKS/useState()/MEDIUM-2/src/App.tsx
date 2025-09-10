@@ -1,33 +1,68 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
+interface FormType{
+  name: string;
+  email: string;
+}
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [step, setStep] = useState(1);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [formData, setFormData] = useState<FormType>({name: "", email:""});
+
+  const handleSummary = () => {
+    const formData = {
+      name: name,
+      email: email
+    }
+    setFormData(formData);
+  }
 
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h1>
+          Multi-Step Form
+        </h1>
+
+        
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+
+      <div>
+        {step === 1 ? (
+          <div>
+            <h3>
+          Enter Name:
+          <input type="text" placeholder='Name' onChange={(e) => setName(e.target.value)}/>
+          <button onClick={() => setStep(2)}>Next</button>
+        </h3>
+          </div>
+        ) : (
+          <h3>
+          Enter Name:
+          <input type="text" placeholder='Email' onChange={(e) => setEmail(e.target.value)}/>
+        </h3>
+        )
+
+        }
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <div>
+        <button onClick={handleSummary}>Show Summary</button>
+      </div>
+
+      {name === '' && email === '' ? (
+        <span>Fill the form first</span>
+      ) : (
+        <div>
+          Summary:
+            <strong>name is: {formData.name}</strong><br />
+            <strong>Email is: {formData.email}</strong>
+        </div>
+      )}
     </>
   )
 }
