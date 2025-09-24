@@ -1,7 +1,7 @@
 {
   "posts": [
-    { "id": "1", "title": "string 6" },
-    { "id": "2", "title": "some post" }
+    { "id": "1", "title": "string 12" },
+    { "id": "2", "title": "some post comment" }
   ],
   "comments": [
     { "id": "1", "text": "some text", "postId": "1" },
