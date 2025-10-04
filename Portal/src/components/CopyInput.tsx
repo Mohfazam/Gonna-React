@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Popup } from "./Popup";
 
 export const CopyInput = () => {
 
@@ -17,6 +18,8 @@ export const CopyInput = () => {
         <div>
             <input type="text" value={inputValue} onChange={(e) => { setInput(e.target.value) }} />
             <button onClick={handleCopy}>Copy</button>
+
+            <Popup copied={copied} />
         </div>
     )
 }
