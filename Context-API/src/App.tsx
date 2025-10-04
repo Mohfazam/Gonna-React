@@ -1,16 +1,12 @@
 
 import { createContext } from 'react'
 import './App.css'
-import { ComponentA } from './Components/ComponentA'
 import { UserContext } from './Components/UserContext';
 
 
 export const Name = createContext<string>("");
 export const Age = createContext<number>(0);
 function App() {
-
-  const name = "Sarwar";
-  const age = 20;
 
   return (
     <>
