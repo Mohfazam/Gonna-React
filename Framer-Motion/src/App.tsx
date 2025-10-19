@@ -2,6 +2,7 @@
 import "./App.css"
 
 import Keyframe from "./Components/Keyframe"
+import PulseButton from "./Components/PulseButton"
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ const App = () => {
     // </div>
 
     <div>
-      <Keyframe />
+      {/* <Keyframe /> */}
+      <PulseButton />
     </div>
   )
 }
