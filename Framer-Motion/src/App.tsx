@@ -1,6 +1,6 @@
 
 import "./App.css"
-import BouncingLoader from "./Components/BouncingLoader"
+import Varients from "./Components/Varients"
 
 
 
@@ -21,7 +21,8 @@ const App = () => {
     <div>
       {/* <Keyframe /> */}
       {/* <PulseButton /> */}
-      <BouncingLoader />
+      {/* <BouncingLoader /> */}
+      <Varients />
     </div>
   )
 }
