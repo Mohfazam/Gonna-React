@@ -5,11 +5,12 @@ const Keyframe = () => {
       <motion.div className="box" 
       
       animate={{
-        scale: [1, 2]
+        scale: [1, 2, 3, 3, 2, 1]
       }}
       transition={{
         delay: 2,
-        duration: 3
+        duration: 10,
+        ease: "linear"
       }}
       />
     </div>
