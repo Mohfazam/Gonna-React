@@ -1,8 +1,9 @@
 
 import "./App.css"
+import BouncingLoader from "./Components/BouncingLoader"
 
-import Keyframe from "./Components/Keyframe"
-import PulseButton from "./Components/PulseButton"
+
+
 
 const App = () => {
   return (
@@ -19,7 +20,8 @@ const App = () => {
 
     <div>
       {/* <Keyframe /> */}
-      <PulseButton />
+      {/* <PulseButton /> */}
+      <BouncingLoader />
     </div>
   )
 }
