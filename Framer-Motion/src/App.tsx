@@ -1,6 +1,6 @@
 
 import "./App.css"
-import Varients from "./Components/Varients"
+import FlippingCard from "./Components/FlippingCard"
 
 
 
@@ -22,7 +22,8 @@ const App = () => {
       {/* <Keyframe /> */}
       {/* <PulseButton /> */}
       {/* <BouncingLoader /> */}
-      <Varients />
+      {/* <Varients /> */}
+      <FlippingCard />
     </div>
   )
 }
